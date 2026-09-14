@@ -11,8 +11,8 @@ public class AlakzatokApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(AlakzatokApplication.class.getResource("alakzatok-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+        Scene scene = new Scene(fxmlLoader.load(), 453, 288);
+        stage.setTitle("Alakzatok");
         stage.setScene(scene);
         stage.show();
     }
