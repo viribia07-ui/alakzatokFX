@@ -1,34 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="414.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="288.0" prefWidth="453.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <HBox prefHeight="100.0" prefWidth="200.0">
+      <AnchorPane prefHeight="376.0" prefWidth="364.0">
          <children>
-            <VBox prefHeight="400.0" prefWidth="188.0">
-               <children>
-                  <RadioButton mnemonicParsing="false" text="Piros" />
-                  <RadioButton mnemonicParsing="false" text="Zöld" />
-                  <RadioButton mnemonicParsing="false" text="Kék" />
-               </children>
-            </VBox>
-            <VBox prefHeight="400.0" prefWidth="196.0">
+            <AnchorPane layoutX="119.0" layoutY="42.0" prefHeight="99.0" prefWidth="82.0">
                <children>
                   <RadioButton mnemonicParsing="false" text="Négyzet" />
-                  <RadioButton mnemonicParsing="false" text="Kör" />
-                  <RadioButton mnemonicParsing="false" text="Háromszög" />
+                  <RadioButton layoutY="41.0" mnemonicParsing="false" text="Kör" />
+                  <RadioButton layoutY="77.0" mnemonicParsing="false" text="Háromszög" />
+               </children></AnchorPane>
+            <AnchorPane layoutX="33.0" layoutY="42.0">
+               <children>
+                  <RadioButton mnemonicParsing="false" text="Kék" />
+                  <RadioButton layoutY="41.0" mnemonicParsing="false" text="Zöld" />
+                  <RadioButton layoutY="73.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="82.0" text="Piros" />
+               </children></AnchorPane>
+            <AnchorPane layoutX="220.0" layoutY="14.0" prefHeight="265.0" prefWidth="219.0">
+               <children>
+                  <Button layoutX="9.0" layoutY="14.0" mnemonicParsing="false" text="+ Hozzáad" />
+                  <Button layoutX="162.0" layoutY="14.0" mnemonicParsing="false" text="- Töröl" />
+                  <Button alignment="CENTER" layoutX="83.0" layoutY="226.0" mnemonicParsing="false" text="Mentés" />
+                  <ListView layoutX="1.0" layoutY="54.0" prefHeight="137.0" prefWidth="219.0" />
                </children>
-            </VBox>
+            </AnchorPane>
+            <AnchorPane layoutX="51.0" layoutY="147.0" prefHeight="120.0" prefWidth="120.0">
+               <children>
+                  <ImageView fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true" />
+               </children></AnchorPane>
          </children>
-      </HBox>
-      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="212.0" style="-fx-background-color: blue;">
-         <children>
-            <Button mnemonicParsing="false" text="Hozzáad" />
-            <Button mnemonicParsing="false" text="Töröl" />
-            <Button alignment="CENTER" mnemonicParsing="false" text="Mentés" />
-         </children>
-      </VBox>
+      </AnchorPane>
    </children>
-</HBox>
+</VBox>
