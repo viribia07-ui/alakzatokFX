@@ -4,26 +4,32 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox prefHeight="288.0" prefWidth="453.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="288.0" prefWidth="453.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kando.alakzatokfx.AlakzatokController">
    <children>
       <AnchorPane prefHeight="376.0" prefWidth="364.0">
          <children>
             <AnchorPane layoutX="119.0" layoutY="42.0" prefHeight="99.0" prefWidth="82.0">
                <children>
-                  <RadioButton id="radioSquare" fx:id="radioSquare" mnemonicParsing="false" onAction="#onRadioSetSquare" text="Négyzet" />
-                  <RadioButton id="radioCircle" fx:id="radioCircle" layoutY="41.0" mnemonicParsing="false" onAction="#onRadioSetCircle" text="Kör" />
-                  <RadioButton id="radioTriangle" fx:id="radioTriangle" layoutY="77.0" mnemonicParsing="false" onAction="#onRadioSetTriangle" text="Háromszög" />
+                  <RadioButton id="radioSquare" fx:id="radioSquare" mnemonicParsing="false" onAction="#onRadioSetSquare" text="Négyzet">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="radio2D" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton id="radioCircle" fx:id="radioCircle" layoutY="41.0" mnemonicParsing="false" onAction="#onRadioSetCircle" text="Kör" toggleGroup="$radio2D" />
+                  <RadioButton id="radioTriangle" fx:id="radioTriangle" layoutY="77.0" mnemonicParsing="false" onAction="#onRadioSetTriangle" text="Háromszög" toggleGroup="$radio2D" />
                </children></AnchorPane>
             <AnchorPane layoutX="33.0" layoutY="42.0">
                <children>
-                  <RadioButton id="radioRed" fx:id="radioRed" mnemonicParsing="false" onAction="#onRadioSetRed" text="Piros" />
-                  <RadioButton id="radioGreen" fx:id="radioGreen" layoutY="41.0" mnemonicParsing="false" onAction="#onRadioSetGreen" text="Zöld" />
-                  <RadioButton id="radioBlue" fx:id="radioBlue" layoutY="73.0" mnemonicParsing="false" onAction="#onRadioSetBlue" prefHeight="25.0" prefWidth="82.0" text="Kék" />
+                  <RadioButton id="radioRed" fx:id="radioRed" mnemonicParsing="false" onAction="#onRadioSetRed" text="Piros">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="radioColors" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton id="radioGreen" fx:id="radioGreen" layoutY="41.0" mnemonicParsing="false" onAction="#onRadioSetGreen" text="Zöld" toggleGroup="$radioColors" />
+                  <RadioButton id="radioBlue" fx:id="radioBlue" layoutY="73.0" mnemonicParsing="false" onAction="#onRadioSetBlue" prefHeight="25.0" prefWidth="82.0" text="Kék" toggleGroup="$radioColors" />
                </children></AnchorPane>
             <AnchorPane layoutX="220.0" layoutY="14.0" prefHeight="265.0" prefWidth="219.0">
                <children>
-                  <Button layoutX="9.0" layoutY="14.0" mnemonicParsing="false" onAction="#onButtonAdd" text="Hozzáad" />
-                  <Button id="buttonDelete" layoutX="162.0" layoutY="14.0" mnemonicParsing="false" onAction="#onButtonDelete" text="- Töröl" />
+                  <Button id="buttonAdd" fx:id="buttonAdd" layoutX="9.0" layoutY="14.0" mnemonicParsing="false" onAction="#onButtonAdd" text="Hozzáad" />
+                  <Button id="buttonDelete" fx:id="buttonDelete" layoutX="162.0" layoutY="14.0" mnemonicParsing="false" onAction="#onButtonDelete" text="- Töröl" />
                   <Button id="buttonSave" fx:id="buttonSave" alignment="CENTER" layoutX="83.0" layoutY="226.0" mnemonicParsing="false" onAction="#onButtonSave" text="Mentés" />
                   <ListView id="savedList" fx:id="savedList" layoutX="1.0" layoutY="54.0" prefHeight="137.0" prefWidth="219.0" />
                   <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="12.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
@@ -31,7 +37,7 @@
             </AnchorPane>
             <AnchorPane id="changeColor" fx:id="changeColor" layoutX="51.0" layoutY="147.0" prefHeight="120.0" prefWidth="120.0">
                <children>
-                  <ImageView fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView id="geometryImg" fx:id="geometryImg" fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true" />
                </children></AnchorPane>
          </children>
       </AnchorPane>
